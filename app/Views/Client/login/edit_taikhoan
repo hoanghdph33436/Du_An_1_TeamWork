@@ -1,0 +1,86 @@
+<?php
+	foreach ($listuser as $user){
+		extract($user);
+	}
+?>
+<!-- MAIN-CONTENT-SECTION START -->
+<section class="main-content-section">
+		<div class="container">
+			<!-- BSTORE-BREADCRUMB START -->
+			<div class="bstore-breadcrumb">
+				<a href="index.html">HOMe</a>
+				<span><i class="fa fa-caret-right	"></i></span>
+				<span>Authentication</span>
+			</div>
+			<!-- BSTORE-BREADCRUMB END -->
+			
+			<h2 class="page-title">Tài khoản</h2>			
+			
+			<!-- PERSONAL-INFOMATION START -->
+			<div class="personal-infomation">
+				<form class="primari-box personal-info-box" action="index.php?act=edit_taikhoan" method="post">
+					<h3 class="box-subheading">Cập nhật tài khoản</h3>
+					<div class="personal-info-content">
+						<div class="form-group primary-form-group p-info-group">
+							
+							<input type="hidden" value="" name="id_user " id="hoTen" value="<?=$id_user?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label for="">Họ tên<sup>*</sup></label>
+							<input type="text" value="" name="hoTen " id="hoTen" value="<?=$hoTen?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label for="lastname">Số điện thoại<sup>*</sup></label>
+							<input type="text" value="" name="soDienThoai" id="soDienThoai" value="<?=$soDienThoai?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label for="email">Email<sup>*</sup></label>
+							<input type="email" value="" name="email" id="email" id="email" value="<?=$email?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label for="email">Địa chỉ<sup>*</sup></label>
+							<input type="text" value="" name="diaChi" id="diaChi" value="<?=$diaChi?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label for="email">Tên đăng nhập<sup>*</sup></label>
+							<input type="t" value="" name="taiKhoan" id="taiKhoan" value="<?=$taiKhoan?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label for="password">Password <sup>*</sup></label>
+							<input type="password" value="" name="matKhau" id="matKhau" value="<?=$matKhau?>" required
+								class="form-control input-feild">
+						</div>
+						<div class="form-group primary-form-group p-info-group">
+							<label>Ngày sinh</label>
+							<input type="date" name="ngay_sinh" id="ngay_sinh" value="<?=$ngay_sinh?>" required class="form-control input-feild">
+						</div>
+						<div class="submit-button">
+                                    <button type="submit" name="capnhat" id="SubmitCreate" class="btn main-btn" ><span>
+											<i class="fa fa-lock submit-icon"></i>
+											Cập nhật
+										</span>
+                                    </button>
+									
+						</div>
+					
+						
+					</div>
+					<?php if(isset($thongBao) && $thongBao != ""){
+                      		echo $thongBao;
+                	}?>
+				</form>
+			</div>
+			<!-- PERSONAL-INFOMATION END -->
+		</div>
+        
+    <div >
+        
+    </div>
+	</section>
+	<!-- MAIN-CONTENT-SECTION END -->
